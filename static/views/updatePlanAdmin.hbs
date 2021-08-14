@@ -1,0 +1,117 @@
+<link rel="stylesheet" href="../css/addPlanAdmin.css" />
+
+<header id="header">
+  <nav>
+    <div class="container">
+      <div class="text-center">
+        <a href="/" class="nav-brand text-dark">Plan Management System</a>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<main id="site-main">
+  <div class="container">
+    <div class="box-nav d-flex justify-between">
+      <div class="filter">
+        <a href="/adminDashboard"><i class="fas fa-angle-double-left"></i>
+          All Plans</a>
+      </div>
+    </div>
+    <div class="form-title text-center">
+      <h2 class="text-dark">Update Plan</h2>
+      <span class="text-info">Use the below form to update an Plan</span>
+    </div>
+
+    {{#if singlePlan}}
+
+      <form action="/updatePlanData" method="POST" id="update_user">
+        <div class="new_user">
+          <input type="hidden" name="_id" value="{{singlePlan._id}}" />
+
+          <div class="form-group">
+            <label for="planName" class="text-dark">Plan Name</label>
+            <input
+              type="text"
+              name="planName"
+              value="{{singlePlan.planName}}"
+              placeholder="Plan Name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="planPrice1" class="text-dark">Price for
+              <b>1</b>
+              Month</label>
+            <input
+              type="number"
+              name="planPrice1"
+              value="{{singlePlan.planPrice1}}"
+              placeholder="Price For 1 Month Plan"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="planPrice12" class="text-dark">Price for
+              <b>12</b>
+              Month</label>
+            <input
+              type="number"
+              name="planPrice12"
+              value="{{singlePlan.planPrice12}}"
+              placeholder="Price For 12 Month Plan"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="planPrice24" class="text-dark">Price for
+              <b>24</b>
+              Month</label>
+            <input
+              type="number"
+              name="planPrice24"
+              value="{{singlePlan.planPrice24}}"
+              placeholder="Price For 24 Month Plan"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="planPrice36" class="text-dark">Price for
+              <b>36</b>
+              Month</label>
+            <input
+              type="number"
+              name="planPrice36"
+              value="{{singlePlan.planPrice36}}"
+              placeholder="Price For 36 Month Plan"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="description" class="text-dark">description</label>
+            <input
+              type="text"
+              name="description"
+              value="{{singlePlan.description}}"
+              placeholder="Plan description"
+            />
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save Update</button>
+          </div>
+
+        </div>
+      </form>
+    {{/if}}
+
+  </div>
+</main>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+{{! <script src="/js/index.js"></script> }}

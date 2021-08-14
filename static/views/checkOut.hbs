@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="../css/checkOut.css" />
+
+
+<header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <p class="nav-brand text-dark">CheckOut Page</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+        
+ {{#if singlePlan}}
+ <form action="/finalForwadSave" method="POST" id="saveToDB">
+    <div class="mainPage row ">
+        <div class="leftSide col-sm-8 ">
+
+            <div class="mainNamePlan"> <i
+                class="fa fa-bicycle bPlan fa-4x"
+                style="padding-right: 20px;"
+              ></i> <span class="planNameHeader" style="font-size:30px; "> WEB HOSTING : {{singlePlan.planName}}</span>
+              </div>
+              
+             <div class="row container">
+                <div class="col-sm-2 card1">
+                    <p class="checkMonth">1 month</p>
+                    <h3 class="ckeckPrice">$<span class="checkPrice1">{{singlePlan.planPrice1}}</span></h3>
+                    <h5 class="monthWrittenWord">/month</h5>
+                </div>
+                 <div class="col-sm-2 card2">
+                    <p class="checkMonth">12 month</p>
+                    <h3 class="ckeckPrice">$<span class="checkPrice12">{{singlePlan.planPrice12}}</span></h3>
+                    <h5 class="monthWrittenWord">/month</h5>
+                    <p class="savePercetage">SAVE 37%</p>
+                    <p class="previousPrice">$15.99</p>
+                </div>
+                <div class="col-sm-2 card3">
+                    <p class="checkMonth">24 month</p>
+                    <h3 class="ckeckPrice">$<span class="checkPrice24">{{singlePlan.planPrice24}}</span></h3>
+                    <h5 class="monthWrittenWord">/month</h5>
+                    <p class="savePercetage">SAVE 37%</p>
+                    <p class="previousPrice">$17.99</p>
+                </div>
+                <div class="col-sm-2 card4">
+                    <p class="checkMonth">36 month</p>
+                    <h3 class="ckeckPrice">$<span class="checkPrice36">{{singlePlan.planPrice36}}</span></h3>
+                    <h5  class="monthWrittenWord">/month</h5>
+                    <p class="savePercetage">SAVE 37%</p>
+                    <p class="previousPrice">$19.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="rightSide col-sm-3">
+
+            <h4 class="checkOrder">ORDER SUMMARY</h2>
+            
+                <div class="row">
+                    <div class="columnleft">
+                        <div style="margin-top: 10px;">
+                            <h6>WEB ENTERPRICE</h6>
+                            <p style="margin-top:-5px; "><span class="monthTotal"></span> months</p>
+                        </div>
+                        <div>
+                            <p style="margin-top: 40px;">Tax</p>
+                        </div>
+                        <div>
+                            <p style="margin-top: 45px;">Total</p>
+                        </div>
+                    </div>
+                   <div class="columnright">
+                        <div>
+                            <p style="margin-top:25px; margin-left:20%"><b>$<span class="finalPrice">0</span></b></p>
+                        </div>
+                        <div>
+                            <p style="margin-top:50px; margin-left:17%; color: red;"><b>$<span class="TaxPrice">0</span></b></p>
+                        </div>
+                        <div>
+                            <p style="margin-top:30px; margin-left:12%; font-size: 21px;"><b>$<span class="finalTaxWithTotal">0</span></b></p>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-left: 20%">All price are in CAD</p>
+            
+                <a href="/finalCheckOutCall"><button type="button" class="btn btn-default btn-lg btn-block finalCheckOut"
+                    >
+                    CheckOut
+                </button></a>
+        </div>
+    </div>
+    </form>
+    {{/if}}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/index.js"></script>

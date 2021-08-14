@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="css/adminDashboard.css" />
+
+<!-- Header -->
+<header id="header">
+  <nav>
+    <div class="container">
+      <div class="text-center">
+        <a href="/" class="nav-brand text-dark">Plan Management System</a>
+      </div>
+      <div class="nav-brand text-dark">
+        <div> {{email}}</div>
+        <div> {{firstName}} {{lastName}}</div>
+      </div>
+      <div>
+        <a href="/logout"><button
+            type="button"
+            class="btn btn-danger text-white"
+            style="margin-left: 100%; "
+          >LogOut</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- /Header -->
+
+<!-- Main Site -->
+
+<main id="site-main">
+  <div class="container">
+    <div class="box-nav d-flex justify-between">
+      <a href="/addPlan" class="border-shadow">
+        <span class="text-gradient">New Plan
+          <i class="fas fa-plus-square"></i>
+        </span>
+      </a>
+    </div>
+
+    {{#each planData}}
+      <!-- form handling -->
+      <form action="/" method="POST">
+        <div class="login-container">
+          <div class="row col-12 section">
+            <div class="jumbotron col-xl-7 hot-plan-design">
+              <div>
+                <i
+                  class="fa fa-bicycle bPlan"
+                  style="font-size:48px; margin-left: 50%;"
+                ></i>
+                <h2 style="margin-left: 30%;"><strong class="text-danger">
+                    {{this.planName}}
+                  </strong><small
+                    style="background-color: rgba(255, 247, 0, 0.85);"
+                  >save 30%</small></h2>
+
+                <p style="margin-left: 30%;">{{this.description}}</p>
+
+                <h2 style="margin-left: 35%;"><strong
+                    class="text-danger"
+                  >C${{this.planPrice1}}</strong><small>/mo</small></h2>
+                <button
+                  type="button"
+                  class="btn btn-default btn-lg btn-block"
+                  style="background-color: rgb(48, 60, 221); color:blanchedalmond;"
+                >Add to Cart</button>
+                <div style="margin-top: 10%; margin-left:30%; "><i
+                    class="fas fa-tachometer-alt"
+                    style="size: 20px;"
+                  ></i><strong style="font-size: 17px;"> STARTER</strong>
+                  <span style="font-size: 17px;">Performance</span>
+                  <i
+                    class="fa fa-info-circle infos"
+                    style="color:rgb(96, 96, 211)"
+                  ></i>
+                </div>
+                <div style="margin-left: 30%;"><i
+                    class="fa fa-first-order"
+                    style="size: 20px;"
+                  ></i><strong style="font-size: 17px;"> Single</strong>
+                  <span style="font-size: 17px;">Website</span>
+                </div>
+                <div style="margin-left: 30%;"><i
+                    class="fa fa-archive"
+                    style="size: 20px;"
+                  ></i><strong style="font-size: 17px;"> Unlimited</strong>
+                  <span style="font-size: 17px;">Space & traffic </span>
+                </div>
+                <div style="margin-left: 30%;"><i
+                    class="fa fa-arrows"
+                    style="size: 20px;"
+                  ></i><strong style="font-size: 17px;"> Free</strong>
+                  <span style="font-size: 17px;">Site Migration </span>
+                </div>
+                <div class="changing-btn col-4">
+                  <a
+                    href="/updatePlan/{{this._id}}"
+                    class="btn border-shadow update"
+                  >
+                    <span class="text-gradient"><i
+                        class="fas fa-pencil-alt"
+                      ></i></span>
+                  </a>
+                  <a
+                    class="btn border-shadow delete"
+                    href="/delete/{{this._id}}"
+                    onclick="return confirm('Are you sure to delete this record?');"
+                  >
+                    <span class="text-gradient"><i
+                        class="fas fa-times"
+                      ></i></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </form>
+    {{/each}}
+
+  </div>
+</main>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>

@@ -1,0 +1,212 @@
+<link rel="stylesheet" href="css/hostingPlans.css" />
+
+
+<!-- A Hero section -->
+    <div class="container">
+      <div class="row hero-section col-12 text-center text-white">
+        
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h1>Over 50,000 websites have gone FastCloud Hosting</h3>
+            <h5 class="descOfHost">The top-rated Hosting Solution for personal and small business websites in four consecutive years by the HostAdvice Community! Welcome to the FastCloud Family!</h5>
+              <div class="input-group-btn">
+              <button class="btn btn-default btnpromotion btn-danger" type="submit">
+                <b>Plans & Pricing</b></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img class="imagPro" src="../images/hostingImagePlan.jpg">
+          </div>
+
+      </div>
+    </div>
+
+
+
+<!-- Plans Offers-->
+<div class="login-container">
+  <div class="row col-12">
+    {{#each planData}}
+    <div class="jumbotron col-xl-3 hot-plan-design">
+      <div>
+        <i  
+          class="fa fa-bicycle bPlan"
+          style="font-size:48px; margin-left: 50%;"
+        ></i>
+        <h2 style="margin-left: 30%;"><strong class="text-danger">{{this.planName}}
+          </strong><small
+            style="background-color: rgba(255, 247, 0, 0.85);"
+          >save 30%</small></h2>
+
+        <p style="margin-left: 30%;">{{this.description}}</p>
+
+        <h2 style="margin-left: 35%;"><strong
+            class="text-danger"
+          >C${{this.planPrice1}}</strong><small>/mo</small></h2>
+          
+        <a href="/checkOutPage/{{this._id}}"><button
+          type="button"
+          class="btn btn-default btn-lg btn-block"
+          style="background-color: rgb(48, 60, 221); color:blanchedalmond;"
+        >Add to Cart</button></a>
+
+        <div style="margin-top: 10%; margin-left:30%; "><i
+            class="fas fa-tachometer-alt"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> STARTER</strong>
+          <span style="font-size: 17px;">Performance</span>
+          <i
+            class="fa fa-info-circle infos"
+            style="color:rgb(96, 96, 211)"
+          ></i></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-first-order"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Single</strong>
+          <span style="font-size: 17px;">Website</span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-archive"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Unlimited</strong>
+          <span style="font-size: 17px;">Space & traffic </span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-arrows"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Free</strong>
+          <span style="font-size: 17px;">Site Migration </span></div>
+      </div>
+    </div>
+    {{/each}}
+
+    {{!-- <div class="jumbotron col-xl-3 hot-plan-design">
+      <div>
+        <i
+          c
+          style="font-size:48px; margin-left: 50%;"
+        ></i>
+        <h2 style="margin-left: 30%;"><strong class="text-danger">PRO
+          </strong><small
+            style="background-color: rgba(255, 247, 0, 0.85);"
+          >save 50%</small></h2>
+
+        <p style="margin-left: 30%;">Pro performance, premium features, free
+          domain2, and more!</p>
+
+        <h2 style="margin-left: 35%;"><strong
+            class="text-danger"
+          >C$4.10</strong><small>/mo</small></h2>
+        <button
+          type="button"
+          class="btn btn-default btn-lg btn-block"
+          style="background-color: rgb(48, 60, 221); color:blanchedalmond;"
+        >Block level button</button>
+
+        <div style="margin-top: 10%; margin-left:30%; "><i
+            class="fas fa-tachometer-alt"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> STARTER</strong>
+          <span style="font-size: 17px;">Performance</span>
+          <i
+            class="fa fa-info-circle infos"
+            style="color:rgb(96, 96, 211)"
+          ></i></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-first-order"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Single</strong>
+          <span style="font-size: 17px;">Website</span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-archive"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Unlimited</strong>
+          <span style="font-size: 17px;">Space & traffic </span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-arrows"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Free</strong>
+          <span style="font-size: 17px;">Site Migration </span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-globe"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Free</strong>
+          <span style="font-size: 17px;">Domain </span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-lock"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> SSL</strong>
+          <span style="font-size: 17px;">Certificate </span></div>
+      </div>
+    </div>
+
+    <div class="jumbotron col-xl-3 hot-plan-design">
+      <div>
+        <i
+          class="fas fa-university bPlan"
+          style="font-size:48px; margin-left: 50%;"
+        ></i>
+        <h2 style="margin-left: 30%;"><strong class="text-danger">Enterprice
+          </strong><small
+            style="background-color: rgba(255, 247, 0, 0.85);"
+          >save 60%</small></h2>
+
+        <p style="margin-left: 30%;">Best performance for demanding websites,
+          with SSL & dedicated IP3.</p>
+
+        <h2 style="margin-left: 35%;"><strong
+            class="text-danger"
+          >C$10.49</strong><small>/mo</small></h2>
+        <button
+          type="button"
+          class="btn btn-default btn-lg btn-block"
+          style="background-color: rgb(48, 60, 221); color:blanchedalmond;"
+        >Block level button</button>
+
+        <div style="margin-top: 10%; margin-left:30%; "><i
+            class="fas fa-tachometer-alt"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> STARTER</strong>
+          <span style="font-size: 17px;">Performance</span>
+          <i
+            class="fa fa-info-circle infos"
+            style="color:rgb(96, 96, 211)"
+          ></i></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-first-order"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Single</strong>
+          <span style="font-size: 17px;">Website</span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-archive"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Unlimited</strong>
+          <span style="font-size: 17px;">Space & traffic </span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-arrows"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Free</strong>
+          <span style="font-size: 17px;">Site Migration </span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-globe"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Free</strong>
+          <span style="font-size: 17px;">Domain </span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-lock"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> SSL</strong>
+          <span style="font-size: 17px;">Certificate </span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-external-link-square"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Premium</strong>
+          <span style="font-size: 17px;">Feature </span></div>
+        <div style="margin-left: 30%;"><i
+            class="fa fa-star"
+            style="size: 20px;"
+          ></i><strong style="font-size: 17px;"> Dedicated</strong>
+          <span style="font-size: 17px;">IP </span></div>
+      </div>
+    </div> --}}
+  </div>
+</div>

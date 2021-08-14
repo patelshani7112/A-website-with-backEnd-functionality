@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+#header nav {
+  background-color: #06d6a0;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.nav-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.text-dark {
+  color: #2b2d42;
+}
+
+.mainPage {
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  margin-top: 40px;
+}
+
+.leftSide {
+  border: 2px solid rgb(157, 145, 145);
+  border-radius: 8px;
+  margin-left: 2%;
+}
+
+.rightSide {
+  border: 2px solid rgb(157, 145, 145);
+  border-radius: 8px;
+  margin-left: 3%;
+}
+.card1 {
+  height: 200px;
+  margin: 30px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.card2 {
+  height: 200px;
+  margin: 30px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.card3 {
+  height: 200px;
+  margin: 30px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.card4 {
+  height: 200px;
+  margin: 30px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+.columnleft {
+  float: left;
+  width: 60%;
+  padding: 10px;
+  height: 220px;
+}
+
+.checkOrder {
+  margin-left: 15%;
+  margin-top: 10%;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+  background-color: rgb(67, 157, 216);
+}
+
+.checkMonth {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.ckeckPrice {
+  margin-top: -10px;
+  text-align: center;
+}
+
+.monthWrittenWord {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.savePercetage {
+  text-align: center;
+  margin-top: 5px;
+  background-color: rgb(255, 201, 25);
+  border: 1px solid rgb(255, 201, 25);
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.previousPrice {
+  text-align: center;
+  text-decoration-line: line-through;
+}
+
+.finalCheckOut {
+  background-color: rgb(48, 60, 221);
+  color: blanchedalmond;
+  margin-bottom: 20px;
+}
+
+.planNameHeader {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 40%px;
+  margin-top: 20px;
+  font-size: 30px;
+}

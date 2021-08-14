@@ -1,0 +1,33 @@
+.searchbtn {
+  width: 160px;
+  margin-left: 3px;
+}
+
+.dealsAll {
+  margin-top: 8px;
+}
+
+.hero-section {
+  background-image: url("../images/heroSectionBG.jpg");
+  width: 100%;
+  height: 100%;
+  color: white;
+  margin-top: 5px;
+}
+
+.search-section {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.btnpromotion {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  background-color: rgb(212, 64, 64);
+  color: white;
+}
+
+.ContaintCotent > p {
+  font-size: 40px;
+  margin-top: 50px;
+}

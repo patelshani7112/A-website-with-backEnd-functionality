@@ -1,0 +1,146 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.row {
+  width: 105%;
+}
+.text-whitesmoke {
+  color: whitesmoke;
+}
+.text-darkyellow {
+  color: rgba(255, 235, 59, 0.432);
+}
+
+.button {
+  border-radius: 3px;
+}
+
+.form-button {
+  background-color: rgba(255, 235, 59, 0.24);
+  border-color: rgba(255, 235, 59, 0.24);
+  color: #e6e6e6;
+}
+
+.form-button:hover {
+  background-color: rgba(255, 235, 59, 0.473);
+  border-color: rgba(255, 235, 59, 0.473);
+  color: #e6e6e6;
+}
+
+.button-l {
+  width: 100% !important;
+  margin-top: 20px;
+}
+
+.form-control,
+.border-line {
+  background-color: #5f5f5f;
+  background-image: none;
+  border: 1px solid #424242;
+  border-radius: 1px;
+  color: inherit;
+  display: block;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+}
+.form-control:focus,
+.border-line:focus {
+  border-color: #ffeb3b;
+  background-color: #616161;
+  color: #e6e6e6;
+}
+.form-control,
+.form-control:focus {
+  box-shadow: none;
+}
+.form-control::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.container-content {
+  width: 100%;
+  background-color: #3a3a3aa2;
+  color: inherit;
+  margin-left: 2%;
+  padding: 15px 20px 20px 20px;
+  border-color: #ffeb3b;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0;
+}
+
+.main-bg {
+  background: linear-gradient(#424242, #212121);
+}
+
+.login-container {
+  max-width: 800px;
+  z-index: 100;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.login.login-container {
+  width: 300px;
+}
+.wrapper.login-container {
+  margin-bottom: 10px;
+}
+.logo-badge {
+  color: #e6e6e6;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: -10px;
+  margin-bottom: 10px;
+  margin-left: 40%;
+}
+
+.loginImg {
+  height: 80px;
+  width: 90px;
+  border-radius: 50%;
+  margin-left: 10%;
+}
+
+.sign-up {
+  margin-left: 48%;
+}
+
+.two-part {
+  display: inline-block;
+  width: 49%;
+}
+
+.one-part {
+  width: 150%;
+}
+
+.passStrength {
+  margin-top: -15px;
+}
+
+.fset {
+  color: white;
+  font-size: 20px;
+}
+
+.invalid-feedback-two {
+  margin-left: 55%;
+  color: red;
+}
+
+.invalid-feedback-one {
+  margin-left: 82%;
+  color: red;
+}
+
+.invalid-feedback-new {
+  margin-left: 40%;
+  color: red;
+}

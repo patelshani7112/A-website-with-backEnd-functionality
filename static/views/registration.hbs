@@ -1,0 +1,142 @@
+<link rel="stylesheet" href="css/register.css" />
+
+<div class="container w-50">
+  <div>
+    <h1 class="logo-badge text-whitesmoke">
+      <img src="../images/weblogo.jpeg" class="loginImg" />
+    </h1>
+  </div>
+
+  <p class="text-whitesmoke sign-up">Sign Up</p>
+
+   {{#if registerErrors}}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{#each registerErrors}}
+        <li>
+          {{this.msg}}
+        </li>
+      {{/each}}
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {{/if}}
+
+  <div class="container-content">
+    <form class="row g-3" method="POST" action="/register">
+
+      <fieldset>
+        <legend class="text-center fset">Personal Information</legend>
+        <div class="form-group two-part">
+          <input type="text" class="form-control {{fieldVal.[0].valid}}" placeholder="First Name"
+            value="{{userReg.fName}}" name="rFName" id="rFName" />
+          <div id="validationServerUsernameFeedback" class="invalid-feedback invalid-feedback-two">
+            {{ErrorPrints.rFName}}</div>
+        </div>
+
+        <div class="form-group two-part">
+            <input
+              type=" text" class="form-control {{fieldVal.[1].valid}}" placeholder="Last Name" name="rLName"
+          id="rLName" value="{{userReg.lName}}" />
+        <div id="validationServerUsernameFeedback" class="invalid-feedback invalid-feedback-two">
+          {{ErrorPrints.rLName}}</div>
+  </div>
+
+  <div class="form-group two-part">
+    <input type="email" class="form-control {{fieldVal.[2].valid}}" placeholder="Email" name="rEmail"
+      id="rEmail" value="{{userReg.email}}" />
+    <div id="validationServerUsernameFeedback" class="invalid-feedback invalid-feedback-two">
+      {{ErrorPrints.rEmail}}</div>
+  </div>
+
+
+  <div class="form-group two-part">
+    <input type="tel" class="form-control  {{fieldVal.[3].valid}}" placeholder="Phone Number" name="rPhone"
+      id="rPhone" value="{{userReg.phone}}" />
+    <div id="validationServerUsernameFeedback" class="invalid-feedback invalid-feedback-two">
+      {{ErrorPrints.rPhone}}</div>
+
+  </div>
+  </fieldset>
+
+
+  <fieldset>
+    <legend class="text-center fset" style="margin-left: 25%;">Billing Address</legend>
+
+    <div class="form-group one-part">
+      <input type="text" class="form-control" placeholder="Company Name(Optional)" name="registerCompName"
+        id="registerCompName" value="{{userReg.company}}" />
+      <div class="invalid-feedback invalid-feedback-one"> this is name</div>
+    </div>
+
+    <div class="form-group one-part">
+      <input type="text" class="form-control {{fieldVal.[4].valid}}" placeholder="Street Address"
+        name="rAddress" id="rAddress" value="{{userReg.address}}" />
+      <div id="validationServerUsernameFeedback" class="invalid-feedback invalid-feedback-one">
+        {{ErrorPrints.rAddress}}</div>
+
+    </div>
+
+    <div class="form-group one-part">
+      <input type="text" class="form-control" placeholder="Street Address2" name="rAddress2"
+        id="rAddress2" value="{{userReg.address2}}" />
+
+    </div>
+
+    <div class="form-group two-part">
+      <input type="text" class="form-control {{fieldVal.[5].valid}}" placeholder="City" value="{{userReg.city}}"
+        name="rCity" id="rCity" />
+      <div id="validationServerUsernameFeedback" class="invalid-feedback invalid-feedback-new">
+        {{ErrorPrints.rCity}}</div>
+    </div>
+
+    <div class="form-group two-part">
+      <input type="text" class="form-control {{fieldVal.[6].valid}}" placeholder="Postcode" name="rPostal"
+        id="rPostal" value="{{userReg.postal}}" />
+      <div id="validationServerUsernameFeedback" class="invalid-feedback invalid-feedback-new">
+        {{ErrorPrints.rPostal}}</div>
+    </div>
+
+
+    <div class="form-group one-part">
+      <input type="text" class="form-control {{fieldVal.[7].valid}}" placeholder="Country" name="rCountry"
+        id="rCountry" value="{{userReg.country}}" />
+      <div id="validationServerUsernameFeedback" class="invalid-feedback invalid-feedback-one"
+        style="margin-left: 85%; color: red;"> {{ErrorPrints.rCountry}}</div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend class="text-center fset">Account Security</legend>
+
+
+    <div class="form-group two-part">
+      <input type="password" class="form-control {{fieldVal.[8].valid}}" placeholder="password" name="rpassword"
+        id="rpassword" value="{{userReg.pw}}" />
+      <div id="validationServerUsernameFeedback class=" invalid-feedback invalid-feedback-new" style="color: red;">
+        {{ErrorPrints.rpassword}}</div>
+    </div>
+
+    <div class="form-group two-part" >
+      <input type="password" class="form-control {{fieldVal.[9].valid}}" placeholder="Comfirm Password"
+        name="rComPasswprd" id="rComPasswprd" value="{{userReg.confPW}}" />
+      <div id="validationServerUsernameFeedback" class="invalid-feedback invalid-feedback-new">
+        {{ErrorPrints.rComPasswprd}}
+      </div>
+
+    </div>
+
+  </fieldset>
+  <button type="submit" class="form-button button-l">Sign Up</button>
+  <a class="text-darkyellow HaveAccount" href="./login">Already a Client? Log In</a>
+
+
+  </form>
+</div>
+
+</div>

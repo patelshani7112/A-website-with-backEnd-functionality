@@ -1,0 +1,178 @@
+<link rel="stylesheet" href="css/addPlanAdmin.css" />
+
+<header id="header">
+  <nav>
+    <div class="container">
+      <div class="text-center">
+        <a href="/" class="nav-brand text-dark">Plan Management System</a>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<main id="site-main">
+  <div class="container">
+    <div class="box-nav d-flex justify-between">
+      <div class="filter">
+        <a href="/adminDashboard"><i class="fas fa-angle-double-left"></i>
+          All Plans</a>
+      </div>
+    </div>
+    <div class="form-title text-center">
+      <h2 class="text-dark">New Plan</h2>
+      <span class="text-info">Use the below form to create a new plan</span>
+    </div>
+
+    {{#if planErrors}}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{#each planErrors}}
+          <li>
+            {{this.msg}}
+          </li>
+        {{/each}}
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    {{/if}}
+
+    <form
+      action="addPlan"
+      method="POST"
+      {{! enctype="multipart/form-data" }}
+      id="add_user"
+    >
+      <div class="new_user">
+
+        <div class="form-group {{fieldVal.0.valid}}">
+          <label for="planName" class="text-dark">Plan Name</label>
+          <input type="hidden" name="id" value="" />
+          <input
+            type="text"
+            id="planName"
+            name="planName"
+            value="{{userReg.planName}}"
+            placeholder="Plan Name"
+          />
+          <div
+            id="validationServerUsernameFeedback invalid-feedback"
+            class="ErrorPosition"
+          >{{ErrorPrints.planName}}</div>
+        </div>
+
+        <div class="form-group {{fieldVal.1.valid}}">
+          <label for="planPrice1" class="text-dark">Price for
+            <b>1</b>
+            Month</label>
+          <input
+            type="number"
+            id="planPrice1"
+            name="planPrice1"
+            value="{{userReg.planPrice1}}"
+            placeholder="Price For 1 Month Plan"
+          />
+          <div
+            id="validationServerUsernameFeedback invalid-feedback"
+            class="ErrorPosition"
+          >{{ErrorPrints.planPrice1}}</div>
+        </div>
+
+        <div class="form-group {{fieldVal.2.valid}}">
+          <label for="planPrice12" class="text-dark">Price for
+            <b>12</b>
+            Month</label>
+          <input
+            type="number"
+            id="planPrice12"
+            name="planPrice12"
+            value="{{userReg.planPrice12}}"
+            placeholder="Price For 12 Month Plan"
+          />
+          <div
+            id="validationServerUsernameFeedback invalid-feedback"
+            class="ErrorPosition"
+          >{{ErrorPrints.planPrice12}}</div>
+        </div>
+
+        <div class="form-group {{fieldVal.3.valid}}">
+          <label for="planPrice24" class="text-dark">Price for
+            <b>24</b>
+            Month</label>
+          <input
+            type="number"
+            id="planPrice24"
+            name="planPrice24"
+            value="{{userReg.planPrice24}}"
+            placeholder="Price For 24 Month Plan"
+          />
+          <div
+            id="validationServerUsernameFeedback invalid-feedback"
+            class="ErrorPosition"
+          >{{ErrorPrints.planPrice24}}</div>
+        </div>
+
+        <div class="form-group {{fieldVal.4.valid}}">
+          <label for="planPrice36" class="text-dark">Price for
+            <b>36</b>
+            Month</label>
+          <input
+            type="number"
+            id="planPrice36"
+            name="planPrice36"
+            value="{{userReg.planPrice36}}"
+            placeholder="Price For 36 Month Plan"
+          />
+          <div
+            id="validationServerUsernameFeedback invalid-feedback"
+            class="ErrorPosition"
+          >{{ErrorPrints.planPrice36}}</div>
+        </div>
+
+        <div class="form-group {{fieldVal.5.valid}}">
+          <label for="description" class="text-dark">description</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            value="{{userReg.description}}"
+            placeholder="Plan description"
+          />
+          <div
+            id="validationServerUsernameFeedback invalid-feedback"
+            class="ErrorPosition"
+          >{{ErrorPrints.description}}</div>
+        </div>
+
+        <div class="form-group">
+          <label for="image" class="text-white">Upload image</label>
+          <input
+            type="file"
+            name="image"
+            id="image"
+            class="form-control-file text-white"
+          />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn text-dark update">Add Plan</button>
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+</main>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="../js/index.js"></script>
